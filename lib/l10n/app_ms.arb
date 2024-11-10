@@ -1,0 +1,78 @@
+{
+    "welcome_title": "Rekod Perbelanjaan",
+    "welcome_caption": "Sejarah perbelanjaan anda\nsentiasa di hujung jari",
+    "already_have_account": "Sudah ada akaun?",
+    "do_not_have_account": "Belum ada akaun?",
+    "email": "E-mel",
+    "password": "Kata Laluan",
+    "enter_password": "Masukkan kata laluan",
+    "must_contain_8_chars": "Mesti mengandungi sekurang-kurangnya 8 aksara",
+    "must_contain_1_digit": "Mesti mengandungi sekurang-kurangnya 1 nombor",
+    "must_contain_1_upper": "Mesti mengandungi sekurang-kurangnya 1 huruf besar",
+    "must_contain_1_lower": "Mesti mengandungi sekurang-kurangnya 1 huruf kecil",
+    "enter_email": "Masukkan e-mel",
+    "enter_valid_email": "Masukkan e-mel yang sah",
+    "unknown_exception": "Ralat tidak diketahui",
+    "server_failure": "Ralat pelayan",
+    "weak_password": "Kata laluan yang dimasukkan terlalu lemah",
+    "email_already_in_use": "Pengguna dengan e-mel ini sudah berdaftar",
+    "user_not_found": "Pengguna tidak dijumpai",
+    "wrong_password": "Kata laluan salah",
+    "too_many_requests": "Terlalu banyak permintaan. Sila cuba lagi nanti.",
+    "invalid_email": "E-mel dalam format yang salah",
+    "user_disabled": "Pengguna telah disekat. Hubungi sokongan teknikal",
+    "signin": "Log Masuk",
+    "signup": "Daftar",
+    "logout": "Log Keluar",
+    "spendings_tab": "Perbelanjaan",
+    "profile_tab": "Profil",
+    "no_spending_for": "Tiada perbelanjaan untuk {month}",
+    "@no_spending_for": {
+      "placeholders": {
+        "month": {
+          "type": "String"
+        }
+      }
+    },
+    "add_category": "Tambah Kategori",
+    "delete_category": "Padam Kategori",
+    "delete_category_message": "Perhatian! Apabila kategori dipadam, semua perbelanjaan dari kategori tersebut akan dipadamkan selama-lamanya.",
+    "add_spending": "Tambah Perbelanjaan",
+    "delete_spending": "Padam maklumat perbelanjaan?",
+    "enter_amount": "Masukkan jumlah",
+    "name": "Nama",
+    "color": "Warna",
+    "add": "Tambah",
+    "save": "Simpan",
+    "delete": "Padam",
+    "confirm": "Sahkan",
+    "select_date": "Pilih tarikh",
+    "cancel": "Batal",
+    "error": "Ralat",
+    "total": "Jumlah",
+    "date": "Tarikh",
+    "enter_name": "Masukkan nama",
+    "enter_date": "Masukkan tarikh",
+    "enter_number": "Masukkan nombor",
+    "enter_color": "Masukkan warna",
+    "enter_valid_color": "Masukkan warna dalam format HEX",
+    "enter_valid_date": "Masukkan tarikh dalam format xx/xx/xx",
+    "short_month": "{month_num, select, month_1 {Jan} month_2 {Feb} month_3 {Mac} month_4 {Apr} month_5 {Mei} month_6 {Jun} month_7 {Jul} month_8 {Ogo} month_9 {Sep} month_10 {Okt} month_11 {Nov} month_12 {Dis} other {bln}}",
+    "@short_month": {
+      "description": "Singkatan bulan",
+      "placeholders": {
+        "month_num": {
+          "type": "String"
+        }
+      }
+    },
+    "long_month": "{month_num, select, month_1 {Januari} month_2 {Februari} month_3 {Mac} month_4 {April} month_5 {Mei} month_6 {Jun} month_7 {Julai} month_8 {Ogos} month_9 {September} month_10 {Oktober} month_11 {November} month_12 {Disember} other {bulan}}",
+    "@long_month": {
+      "description": "Nama penuh bulan",
+      "placeholders": {
+        "month_num": {
+          "type": "String"
+        }
+      }
+    }
+}
