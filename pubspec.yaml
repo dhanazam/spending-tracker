@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   theme_extensions_builder_annotation: ^2.0.0
+  go_router: ^11.1.2
 
 dev_dependencies:
   flutter_test:
