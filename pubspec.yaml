@@ -11,6 +11,9 @@ dependencies:
     sdk: flutter
   theme_extensions_builder_annotation: ^2.0.0
   go_router: ^11.1.2
+  flutter_localizations:
+    sdk: flutter
+  intl: any
 
   module_business:
     path: packages/module_business
