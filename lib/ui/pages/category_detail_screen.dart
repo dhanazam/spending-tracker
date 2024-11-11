@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:module_business/module_business.dart';
 import 'package:spendingtracker/blocs/categories/categories_bloc.dart';
+import 'package:spendingtracker/ui/widgets/spending/slidable_list_tile.dart';
 
 class CategoryDetailScreen extends StatefulWidget {
   const CategoryDetailScreen({
