@@ -1,7 +1,5 @@
 part of 'categories_bloc.dart';
 
-import 'package:module_business/module_business.dart';
-
 abstract class CategoriesState extends Equatable {
   const CategoriesState();
 
