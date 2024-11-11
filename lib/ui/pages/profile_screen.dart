@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:spendingtracker/blocs/authentication/authentication_bloc.dart';
 import 'package:spendingtracker/blocs/profile/profile_bloc.dart';
+import 'package:spendingtracker/ui/widgets/profile/profile_avatar.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
