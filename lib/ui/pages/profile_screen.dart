@@ -1,4 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:spendingtracker/blocs/authentication/authentication_bloc.dart';
+import 'package:spendingtracker/blocs/profile/profile_bloc.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -7,10 +13,64 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ProfileScreen'),
+        title: Text(AppLocalizations.of(context)!.profile_tab),
       ),
-      body: const Center(
-        child: Text('ProfileScreen'),
+      body: Padding(
+        padding: const EdgeInsets.all(25.0),
+        child: SizedBox(
+          child: Row(
+            children: [
+              BlocBuilder<ProfileBloc, ProfileState>(
+                builder: (context, state) {
+                  final profilePicturePath = (state is ProfileLoaded)
+                      ? state.profilePicturePath
+                      : null;
+                  return ProfileAvatar(
+                    key: UniqueKey(),
+                    isImageLoading: state is ProfileLoading,
+                    avatarImage: profilePicturePath == null
+                        ? null
+                        : Image.file(File(profilePicturePath)),
+                    size: 100,
+                    onImageUpdated: (imagePath) async {
+                      context
+                          .read<ProfileBloc>()
+                          .add(ProfileUpload(imagePath: imagePath));
+                    },
+                    onImageDeleted: () async {
+                      context.read<ProfileBloc>().add(ProfileDelete());
+                    },
+                  );
+                },
+              ),
+              const SizedBox(width: 25),
+              Expanded(
+                child: BlocBuilder<AuthenticationBloc, AuthenticationState>(
+                  builder: (context, state) {
+                    final email =
+                        state is AuthenticationSuccess ? state.email : '';
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(email),
+                        const SizedBox(height: 20),
+                        FilledButton(
+                          key: const Key('signOutButton'),
+                          onPressed: () {
+                            context
+                                .read<AuthenticationBloc>()
+                                .add(AuthenticationSignOut());
+                          },
+                          child: Text(AppLocalizations.of(context)!.logout),
+                        ),
+                      ],
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
