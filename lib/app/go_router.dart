@@ -1,4 +1,12 @@
+import 'dart:async';
+
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:module_business/module_business.dart';
+import 'package:spendingtracker/blocs/authentication/authentication_bloc.dart';
+import 'package:spendingtracker/main.dart';
+import 'package:spendingtracker/ui/pages/pages.dart';
+import 'package:spendingtracker/ui/scaffold_with_navigation/scaffold_with_nested_navigation.dart';
 
 final _mainNavigatorKey = GlobalKey<NavigatorState>();
 final _shellNavigatorAKey = GlobalKey<NavigatorState>();
@@ -89,4 +97,21 @@ GoRouter goRouter(AuthenticationBloc authenticationBloc) {
       ),
     ],
   );
+}
+
+class GoRouterRefreshStream extends ChangeNotifier {
+  GoRouterRefreshStream(Stream<dynamic> stream) {
+    notifyListeners();
+    _subscription = stream.asBroadcastStream().listen(
+          (dynamic _) => notifyListeners(),
+        );
+  }
+
+  late final StreamSubscription<dynamic> _subscription;
+
+  @override
+  void dispose() {
+    _subscription.cancel();
+    super.dispose();
+  }
 }
