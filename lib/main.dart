@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
-import 'package:intl/intl_browser.dart';
+import 'package:intl/intl_standalone.dart';
 import 'package:module_data/module_data.dart';
 import 'package:spendingtracker/app/spending_tracker_app.dart';
 import 'package:spendingtracker/blocs/app_bloc_observer.dart';
