@@ -35,7 +35,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
           titleText:
               '${AppLocalizations.of(context)!.long_month('month_${selectedPeriod.month}')} ${selectedPeriod.year}',
           onTap: () {
-            selectPariodDialog(
+            selectPeriodDialog(
               context: context,
               period: selectedPeriod,
               onSetPeriod: (newPeriod) {
@@ -204,7 +204,7 @@ extension _CategoriesScreenDialogs on _CategoriesScreenState {
     );
   }
 
-  void selectPariodDialog({
+  void selectPeriodDialog({
     required BuildContext context,
     required Period period,
     required Function onSetPeriod,
